@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import Bookmark from "../assets/Bookmark";
-import HeartIcon from "../assets/HeartIcon";
-import "./table.scss";
+import Bookmark from "../stories/assets/Bookmark";
+import HeartIcon from "../stories/assets/HeartIcon";
 
 export interface TableItemInterface {
   label: string | number;

@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-import "./table.scss";
-import DefaultImg from "../assets/default_image.png";
+import DefaultImg from "assets/default_image.png";
 
 import TableItem, { TableItemInterface } from "./TableItem";
 
