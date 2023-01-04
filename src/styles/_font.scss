@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;600&family=Jost:wght@400;500;600&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+$font-kr: "IBM Plex Sans KR", sans-serif;
+$font-en_jost: "Jost", sans-serif;
+$font-en_lato: "Lato", sans-serif;
+
+$font-sizes: (
+  "small": 1.6rem,
+  "medium": 2rem,
+  "large": 2.5rem,
+  "xlarge": 4rem,
+);
+
+@function font-size($font-size-style) {
+  @return map-get($font-sizes, $font-size-style);
+}
+
+%para {
+  font-size: font-size(small);
+}
+
+%h1 {
+  font-size: font-size(xlarge);
+}
+
+%h2 {
+  font-size: font-size(large);
+}
+
+%h3 {
+  font-size: font-size(medium);
+}
+
+%h4 {
+  font-size: font-size(small);
+}
+
+h1 {
+  font-weight: 800;
+  @extend %h1;
+}
+
+h2 {
+  font-weight: 800;
+  @extend %h2;
+}
+
+h3 {
+  font-weight: 400;
+  @extend %h3;
+}
+
+h4 {
+  font-weight: 400;
+  @extend %h4;
+}
+
+h5 {
+  @extend %h4;
+}
+
+p {
+  font-weight: 400;
+  @extend %para;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: sans-serif;
+}
+
+h5,
+h6,
+p {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,26 @@
+@import "./reset";
+@import "./font";
+@import "./palette";
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr repeat(
+      6,
+      [col-start] minmax(min-content, 17.66667rem) [col-end]
+    )
+    1fr [container-end];
+  grid-template-rows: min-content;
+}
+
+.sec-padding {
+  padding: 1rem 2rem;
+}
+
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
+@import "./table";
