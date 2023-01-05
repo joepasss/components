@@ -1,0 +1,115 @@
+.table {
+  .table--header {
+    grid-column: col-start 1 / col-end 6;
+    border-bottom: 2px solid hsl(222, 20%, 80%);
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background-color: hsl(222, 20%, 80%);
+    }
+
+    &__select-group {
+      width: max-content;
+
+      border: 1px solid hsl(222, 20%, 80%);
+      padding: 0.25rem 1rem;
+
+      background-color: transparent;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &:active {
+        border: 1px solid hsl(222, 20%, 80%);
+      }
+
+      &:focus {
+        border: 1px solid hsl(222, 20%, 80%);
+      }
+    }
+  }
+
+  .table--contents {
+    grid-column: col-start 1 / col-end 6;
+    padding: 2rem 0;
+
+    &__item {
+      padding: 0rem 1rem;
+      margin: 0;
+
+      display: grid;
+      grid-template-columns: 5rem 10rem 1fr 5rem;
+      gap: 1rem;
+      place-items: center;
+
+      &:nth-of-type(even) {
+        background-color: hsl(222, 10%, 95%);
+      }
+
+      &--label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h4.sub-label {
+          font-size: calc(font-size(medium) - 0.5rem);
+          color: hsl(222, 10%, 50%);
+        }
+      }
+
+      &--picture {
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        padding: 1rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &--description {
+        place-self: center start;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        h4.sub-desc {
+          font-size: calc(font-size(medium) - 0.5rem);
+          color: hsl(222, 10%, 50%);
+        }
+      }
+
+      &--icon-group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        svg {
+          width: 2rem;
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+  }
+}

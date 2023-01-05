@@ -1,0 +1,95 @@
+.table-chart {
+  &__content {
+    width: 100%;
+
+    &--item {
+      padding: 0.75rem 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, min-content) 1fr min-content;
+      place-items: center;
+      gap: 1rem;
+
+      &:nth-of-type(even) {
+        background-color: hsl(222, 10%, 95%);
+      }
+
+      &__rank,
+      &__rank-delta,
+      &__image,
+      &__icon-group {
+        @extend %flex-center;
+      }
+
+      &__rank,
+      &__rank-delta {
+        width: 3rem;
+        aspect-ratio: 1 / 1;
+      }
+
+      &__rank-delta {
+        h4 {
+          font-size: calc(font-size(medium) - 0.5rem);
+          color: hsl(222, 10%, 50%);
+        }
+      }
+
+      &__image {
+        width: 7rem;
+        aspect-ratio: 1 / 1;
+
+        .image-container {
+          width: 6rem;
+          aspect-ratio: 1 / 1;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &__song-info {
+        place-self: center start;
+        width: 100%;
+
+        div.song-info {
+          @extend %flex-column-start;
+
+          div.song {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-items: center start;
+
+            h4 {
+              overflow-x: hidden;
+              max-width: 100%;
+              width: 100%;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            h4.album-name {
+              font-size: calc(font-size(medium) - 0.5rem);
+              color: hsl(222, 10%, 50%);
+            }
+          }
+
+          h4.artist-name {
+            font-size: calc(font-size(medium) - 0.5rem);
+            color: hsl(222, 10%, 50%);
+          }
+        }
+      }
+
+      &__icon-group {
+        display: flex;
+        gap: 1rem;
+
+        svg {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}

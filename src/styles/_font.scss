@@ -6,9 +6,9 @@ $font-en_lato: "Lato", sans-serif;
 
 $font-sizes: (
   "small": 1.6rem,
-  "medium": 2rem,
-  "large": 2.5rem,
-  "xlarge": 4rem,
+  "medium": 1.92rem,
+  "large": 2.3rem,
+  "xlarge": 2.7rem,
 );
 
 @function font-size($font-size-style) {
@@ -32,7 +32,7 @@ $font-sizes: (
 }
 
 %h4 {
-  font-size: font-size(small);
+  font-size: font-size(medium);
 }
 
 h1 {
@@ -68,13 +68,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h5,
 h6,
 p {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,

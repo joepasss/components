@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import DefaultImg from "assets/default_image.png";
 
 import TableItem, { TableItemInterface } from "./TableItem";
@@ -21,7 +21,7 @@ const Table: FC<TablePropsInterface> = ({
   return (
     <div className="table grid">
       <div className="table--header">
-        <h3 className="title">{title}</h3>
+        <h2 className="title">{title}</h2>
         {pagination && (
           <div className="select-box">
             <select className="table--header__select-group">

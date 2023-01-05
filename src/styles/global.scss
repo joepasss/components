@@ -17,10 +17,24 @@
   padding: 1rem 2rem;
 }
 
-h3,
-h4 {
-  padding: 0;
-  margin: 0;
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@import "./table";
+%flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+%flex-column-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@import "./table/table";
+@import "./table/table-chart";
