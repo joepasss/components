@@ -9,6 +9,7 @@
       grid-template-columns: repeat(3, min-content) 1fr min-content;
       place-items: center;
       gap: 1rem;
+      cursor: pointer;
 
       &:nth-of-type(even) {
         background-color: hsl(222, 10%, 95%);
@@ -79,6 +80,7 @@
           border-radius: inherit;
           width: 6rem;
           aspect-ratio: 1 / 1;
+          transition: all 0.5s cubic-bezier(1, 0, 0, 1);
 
           img {
             width: 100%;
@@ -129,6 +131,14 @@
 
         svg {
           width: 2rem;
+        }
+      }
+
+      &:hover {
+        .table-chart__content--item__image {
+          .image-container {
+            width: 7rem;
+          }
         }
       }
     }
