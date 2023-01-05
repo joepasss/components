@@ -37,11 +37,8 @@ const TableChartItem: FC<TableChartItemProps> = ({ item }) => {
       </td>
 
       <td className="table-chart__content--item__song-info">
-        <div className="song-info">
-          <div className="song">
-            <h4 className="song-name">{item.song.name}</h4>
-            <h4 className="album-name">{item.song.album.name}</h4>
-          </div>
+        <div className="song">
+          <h4 className="song-name">{item.song.name}</h4>
           {item.song.artists.length > 1 ? (
             <h4 className="artist-name">
               {item.song.artists[0].name} 외 {item.song.artists.length + 1}명
@@ -50,6 +47,8 @@ const TableChartItem: FC<TableChartItemProps> = ({ item }) => {
             <h4 className="artist-name">{item.song.artists[0].name}</h4>
           )}
         </div>
+
+        <h4 className="album-name">{item.song.album.name}</h4>
       </td>
 
       <td className="table-chart__content--item__icon-group">

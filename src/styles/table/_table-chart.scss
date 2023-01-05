@@ -1,6 +1,7 @@
 .table-chart {
   &__content {
     width: 100%;
+    max-width: 100%;
 
     &--item {
       padding: 0.75rem 1rem;
@@ -51,35 +52,36 @@
       &__song-info {
         place-self: center start;
         width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        place-items: center start;
 
-        div.song-info {
-          @extend %flex-column-start;
+        h4 {
+          max-width: 100%;
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow-x: hidden;
+        }
 
-          div.song {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            place-items: center start;
-            gap: 1rem;
-
-            h4 {
-              overflow-x: hidden;
-              max-width: 100%;
-              width: 100%;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-            }
-
-            h4.album-name {
-              font-size: calc(font-size(medium) - 0.5rem);
-              color: hsl(222, 10%, 50%);
-            }
-          }
+        div.song {
+          display: flex;
+          flex-direction: column;
+          min-width: 0;
+          width: 100%;
 
           h4.artist-name {
             font-size: calc(font-size(medium) - 0.5rem);
             color: hsl(222, 10%, 50%);
           }
+        }
+
+        h4.album-name {
+          min-width: 0;
+          font-size: calc(font-size(medium) - 0.5rem);
+          color: hsl(222, 10%, 50%);
         }
       }
 
