@@ -1,0 +1,102 @@
+.table-chart-loading {
+  &__contents {
+    width: 100%;
+
+    &--item {
+      display: grid;
+      grid-template-columns: repeat(2, min-content) 1fr min-content;
+      place-items: center;
+      gap: 1rem;
+
+      &:nth-of-type(even) {
+        background-color: hsl(222, 10%, 95%);
+      }
+
+      &__rank,
+      &__image,
+      &__song-info {
+        position: relative;
+      }
+
+      &__rank {
+        width: 7rem;
+        aspect-ratio: 1 / 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 30%;
+          height: 20%;
+          background-color: hsl(222, 10%, 90%);
+          border-radius: 1rem;
+        }
+      }
+
+      &__image {
+        width: 7rem;
+        aspect-ratio: 1 / 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 5rem;
+          height: 5rem;
+          border-radius: 1rem;
+          background: linear-gradient(
+            to right,
+            hsl(222, 10%, 90%) 8%,
+            hsl(222, 10%, 87%) 80%,
+            hsl(222, 10%, 90%) 8%
+          );
+          animation-duration: 70s;
+          animation-fill-mode: forwards;
+          animation-name: skeletonLoading;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      &__song-info {
+        width: 100%;
+        height: 100%;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 80%;
+          height: 70%;
+          border-radius: 1rem;
+          background: linear-gradient(
+            to right,
+            hsl(222, 10%, 90%) 8%,
+            hsl(222, 10%, 87%) 18%,
+            hsl(222, 10%, 90%) 34%
+          );
+          animation-duration: 10s;
+          animation-fill-mode: forwards;
+          animation-name: skeletonLoading;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes skeletonLoading {
+  0% {
+    background-position: -80rem 0;
+  }
+  100% {
+    background-position: 80rem 0;
+  }
+}
