@@ -1,4 +1,5 @@
 import React from "react";
+import Shevron from "assets/icons/Shevron";
 import { FC } from "react";
 import { ChartItem } from "./TableChart";
 import DefaultImage from "assets/default_image.png";
@@ -12,12 +13,32 @@ interface TableChartItemProps {
 const TableChartItem: FC<TableChartItemProps> = ({ item }) => {
   const DeltaRank = () => {
     if (item.previous - item.rank > 0) {
-      return `+${item.previous - item.rank}`;
+      return (
+        <span className="rank-up">
+          <Shevron />
+          <h4>{item.previous - item.rank}</h4>
+        </span>
+      );
     } else if (item.previous - item.rank < 0) {
-      return `-${item.rank - item.previous}`;
+      return (
+        <span className="rank-down">
+          <Shevron />
+          <h4>{item.rank - item.previous}</h4>
+        </span>
+      );
+    } else if (item.previous === 0) {
+      return (
+        <span className="rank-new">
+          <h4>new</h4>
+        </span>
+      );
     }
 
-    return "-";
+    return (
+      <span className="rank-even">
+        <h4>-</h4>
+      </span>
+    );
   };
 
   return (
@@ -26,9 +47,7 @@ const TableChartItem: FC<TableChartItemProps> = ({ item }) => {
         <h4>{item.rank}</h4>
       </td>
 
-      <td className="table-chart__content--item__rank-delta">
-        <h4>{DeltaRank()}</h4>
-      </td>
+      <td className="table-chart__content--item__rank-delta">{DeltaRank()}</td>
 
       <td className="table-chart__content--item__image">
         <div className="image-container">

@@ -28,17 +28,55 @@
       }
 
       &__rank-delta {
-        h4 {
-          font-size: calc(font-size(medium) - 0.5rem);
-          color: hsl(222, 10%, 50%);
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.25rem;
+
+          svg {
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+          }
+
+          h4 {
+            font-size: calc(font-size(medium) - 0.5rem);
+          }
+        }
+
+        span.rank-up {
+          color: hsl(0, 75%, 50%);
+        }
+
+        span.rank-down {
+          color: hsl(222, 75%, 50%);
+
+          svg {
+            transform: rotate(0.5turn);
+          }
+        }
+
+        span.rank-new {
+          color: hsl(60, 75%, 50%);
+        }
+
+        span.rank-even {
+          h4 {
+            font-size: font-size(medium);
+            color: hsl(222, 10%, 50%);
+          }
         }
       }
 
       &__image {
+        border: 1px solid hsl(222, 10%, 80%);
+        border-radius: 1rem;
         width: 7rem;
         aspect-ratio: 1 / 1;
 
         .image-container {
+          overflow: hidden;
+          border-radius: inherit;
           width: 6rem;
           aspect-ratio: 1 / 1;
 
