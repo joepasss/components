@@ -60,6 +60,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             place-items: center start;
+            gap: 1rem;
 
             h4 {
               overflow-x: hidden;
@@ -88,6 +89,18 @@
 
         svg {
           width: 2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    div.song-info {
+      div.song {
+        display: flex;
+
+        h4.album-name {
+          display: none;
         }
       }
     }
