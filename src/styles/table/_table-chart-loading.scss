@@ -8,9 +8,7 @@
       place-items: center;
       gap: 1rem;
 
-      &:nth-of-type(even) {
-        background-color: hsl(222, 10%, 95%);
-      }
+      border-bottom: 1px solid hsl(222, 10%, 80%);
 
       &__rank,
       &__image,
@@ -30,7 +28,7 @@
           transform: translateX(-50%) translateY(-50%);
           width: 30%;
           height: 20%;
-          background-color: hsl(222, 10%, 90%);
+          background-color: hsl(222, 10%, 95%);
           border-radius: 1rem;
         }
       }
@@ -50,9 +48,9 @@
           border-radius: 1rem;
           background: linear-gradient(
             to right,
-            hsl(222, 10%, 90%) 8%,
-            hsl(222, 10%, 87%) 80%,
-            hsl(222, 10%, 90%) 8%
+            hsl(222, 10%, 95%) 8%,
+            hsl(222, 10%, 94%) 80%,
+            hsl(222, 10%, 95%) 8%
           );
           animation-duration: 70s;
           animation-fill-mode: forwards;
@@ -77,9 +75,9 @@
           border-radius: 1rem;
           background: linear-gradient(
             to right,
-            hsl(222, 10%, 90%) 8%,
-            hsl(222, 10%, 87%) 18%,
-            hsl(222, 10%, 90%) 34%
+            hsl(222, 10%, 95%) 8%,
+            hsl(222, 10%, 94%) 18%,
+            hsl(222, 10%, 95%) 34%
           );
           animation-duration: 10s;
           animation-fill-mode: forwards;
